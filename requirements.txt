@@ -16,3 +16,4 @@ pydantic_core==2.6.3
 typing_extensions==4.7.1
 yarl==1.9.2
 python-dotenv==1.0.0
+requests==2.31.0

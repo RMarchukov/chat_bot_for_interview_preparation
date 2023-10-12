@@ -21,8 +21,8 @@ async def menu_command(message: types.Message) -> None:
 
 
 @command_router.message(Command("topics"))
-@command_router.message(F.text == "Перейти до питань")
+@command_router.message(F.text == "Загальні питання")
 async def show_topics_command(message: types.Message) -> None:
-    keyboard = await build_topics_keyboard()
+    keyboard = build_topics_keyboard()['topics_keyboard']
     await message.answer("Оберіть розділ", reply_markup=keyboard.as_markup())
     await message.delete()
